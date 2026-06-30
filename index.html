@@ -1,0 +1,19 @@
+<video id="video" loop playsinline controls>
+    <source src="lv_0_20260630150005.mp4" type="video/mp4">
+</video>
+
+<script>
+const overlay = document.getElementById("overlay");
+const video = document.getElementById("video");
+
+overlay.onclick = async () => {
+    overlay.style.display = "none";
+    video.style.display = "block";
+
+    try {
+        await video.play();
+    } catch (e) {
+        console.log(e);
+    }
+};
+</script>
